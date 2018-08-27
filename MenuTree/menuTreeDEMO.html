@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/menuTree.css">
+</head>
+<script src="js/jquery.js"></script>
+<script src="js/menuTree.js"></script>
+
+<body>
+<div style="width: 300px">
+    <div class="menu" id="menuTreeBox">
+
+    </div>
+</div>
+
+
+<script>
+
+    var mJson = [
+        {
+            name: "收件箱",
+            parent: true,
+            url: "https://www.baidu.com",
+            children: [
+                {
+                    name: "收件箱1",
+                    parent: false,
+                    url: "https://www.baidu.com",
+                    children: [
+                        {
+                            name: "收件箱11",
+                            parent: false,
+                            url: "https://www.baidu.com",
+                            children: [
+                                {
+                                    name: "收件箱111",
+                                    parent: false,
+                                    url: "https://www.baidu.com"
+                                },
+                            ]
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            name: "草稿箱",
+            parent: false,
+            url: "https://www.baidu.com"
+        }
+    ]
+
+    var opts = {
+        data: mJson,
+        nodeId: 'menuTreeBox'
+    }
+
+    $("#menuTreeBox").MenuTree(opts);
+
+//    function openNodes(node) {
+//        debugger
+//        console.log("node1:",node);
+//        node.toggleClass('closeIcon')
+//        node.next('.childMenu').slideToggle(500);
+//
+//    }
+    function openMenuTreeNodes(node) {
+        console.log('node:',node)
+
+    }
+</script>
+</body>
+</html>

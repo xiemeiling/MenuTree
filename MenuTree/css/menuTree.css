@@ -1,0 +1,93 @@
+body, div, span, ul, li, ol, a, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.menu {
+    width: 200px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+ .menuItem{
+    position: relative;
+    min-height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+     cursor:pointer;
+
+}
+.item a:hover{
+    color: #108EE9;
+
+}
+
+.menuTree{
+    padding:10px 10px;
+}
+
+
+.child-item a{
+    color: rgba(0, 0, 0, .65) ;
+}
+.pSwitch{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top:7px;
+    cursor: pointer;
+
+}
+.pSwitch:before{
+    content: '\ee4e';
+    font-family: "iconfont";
+    font-size: 12px;
+    line-height: 1;
+    color: #555;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    transform: rotate(0);
+    transition: all .15s ease;
+}
+.closeIcon:before{
+    transform: rotate(180deg);
+}
+.childMenu{
+    display: none;
+    padding-left:15px
+}
+
+
+
+
+/*********************  content icon  *********************/
+@font-face {
+    font-family: 'iconfont';  /* project id 237073 */
+    src: url('//at.alicdn.com/t/font_237073_bnm462a5gvte29.eot');
+    src: url('//at.alicdn.com/t/font_237073_bnm462a5gvte29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_237073_bnm462a5gvte29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_237073_bnm462a5gvte29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_237073_bnm462a5gvte29.svg#iconfont') format('svg');
+}
+
+@font-face {
+    font-family: 'app-detail-icon';  /* project id 405952 */
+    src: url('//at.alicdn.com/t/font_405952_cmro5h5zlqcqsemi.eot');
+    src: url('//at.alicdn.com/t/font_405952_cmro5h5zlqcqsemi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_405952_cmro5h5zlqcqsemi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_405952_cmro5h5zlqcqsemi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_405952_cmro5h5zlqcqsemi.svg#app-detail-icon') format('svg');
+}
